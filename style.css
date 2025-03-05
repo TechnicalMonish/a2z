@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik+Wet+Paint&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Dancing+Script:wght@400..700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
+:root{
+    --glowcolor : #e9ff09;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins", serif;
+}
+
+body{
+    height: 100%;
+    max-width: 100%;
+    background-color: black;
+}
+
+.mainContainer{
+    height: 60vh;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.leftContainer{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 7rem;
+    flex-direction: column;
+}
+
+.heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+    font-size: 2rem;
+    color: #e9ff09;
+}
+
+.heading h1{
+    font-family: "Dancing Script", cursive;
+}
+
+.heading h1:hover{
+    transform: scale(1.5);
+    -webkit-text-stroke: 2px #e9ff09;
+    color: transparent;
+}
+
+.scrollingText marquee {
+    color: white;
+    font-size: 1.5rem;
+}
+
+#obj{
+    height: 60vh;
+    border-left: 8px solid #e9ff09;
+    transform: rotate(30deg);
+}
+
+.target_bg{
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    opacity: 0.4;
+}
+
+.leftContainer a{
+    text-decoration: none;
+    font-family: "DynaPuff", system-ui;
+}
+
+.leftContent, .rightContent{
+    position: relative;
+}
+
+.leftContainer a , .rightContainer a{
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+.leftContainer a:nth-child(1){
+    color: transparent;
+    -webkit-text-stroke: 2px #e9ff09;
+}
+
+.leftContainer a:nth-child(2){
+    color: #e9ff09;
+    animation: animate 4s ease-in-out infinite;
+}
+
+@keyframes animate {
+    0% , 100%{
+        clip-path: polygon(0% 45%, 11% 51%, 21% 57%, 31% 61%, 43% 56%, 50% 49%, 59% 42%, 68% 44%, 75% 51%, 84% 61%, 94% 55%, 100% 47%, 100% 100%, 0% 100%);
+    }
+    50%{
+        clip-path: polygon(0 63%, 10% 54%, 19% 46%, 28% 41%, 37% 38%, 47% 38%, 56% 45%, 65% 50%, 76% 51%, 85% 45%, 93% 39%, 100% 33%, 100% 100%, 0% 100%);
+    }
+}
+
+
+
+.leftContainer a{
+    -webkit-text-stroke: 2px #e9ff09;
+    color: transparent;
+}
+
+
+.rightContainer a:nth-child(1){
+    color: transparent;
+    -webkit-text-stroke: 2px #e9ff09;
+}
+
+.rightContainer a:nth-child(2){
+    color: #e9ff09;
+    animation: animate 4s ease-in-out infinite;
+}
+
+
+.rightVideoBack{
+    height: 100vh;
+    width: 100%;
+}
+
+.rightContainer{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 7rem;
+    flex-direction: column;
+}
+
+.rightContainer a{
+    text-decoration: none;
+    color: #e9ff09;
+    font-family: "DynaPuff", system-ui;
+}
+
+
+
+.footer{
+    width: 100%;
+    border-top: 2px solid black;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    position: absolute;
+    bottom: 0;
+    color: #e9ff09;
+    border-top: 2px solid white;
+}
+
+@media only screen and (max-width: 426px) {
+    .innerLeft a{
+        font-size: 3rem;
+        letter-spacing: 6px;
+    }
+
+    .mainContainer{
+        flex-direction: column;
+    }
+
+    .innerRight a{
+        font-size: 3rem;
+    }
+
+    #obj{
+        display: none;
+    }
+
+    .footer{
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width: 376px) {
+    .heading h1{
+        font-size: 3rem;
+    }
+    .innerLeft a{
+        font-size: 3rem;
+        letter-spacing: 6px;
+    }
+
+    .mainContainer{
+        flex-direction: column;
+    }
+
+    .innerRight a{
+        font-size: 3rem;
+    }
+    #obj{
+        display: none;
+    }
+
+    .footer{
+        font-size: 1rem;
+    }
+}
+
+
+@media only screen and (max-width: 769px) {
+    .heading h1{
+        font-size: 3.5rem;
+    }
+    .innerLeft a{
+        font-size: 3rem;
+        letter-spacing: 6px;
+    }
+
+    .innerRight a{
+        font-size: 3rem;
+    }
+
+    #obj{
+        height: 50vh;
+    }
+
+    .footer{
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .heading h1{
+        font-size: 4rem;
+    }
+    .innerLeft a{
+        font-size: 3.5rem;
+        letter-spacing: 6px;
+    }
+
+    .innerRight a{
+        font-size: 3.5rem;
+    }
+
+    #obj{
+        height: 50vh;
+    }
+
+    .footer{
+        font-size: 1rem;
+    }
+}
+
